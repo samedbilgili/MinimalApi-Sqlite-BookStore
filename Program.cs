@@ -11,7 +11,22 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "BookStore Minimal API", Description = "Book Registration System", Version = "v1" });
 });
 
+builder.Services.AddCors(options =>
+{
+   options.AddDefaultPolicy(
+        policy =>
+        {
+            policy.AllowAnyHeader();
+            policy.AllowAnyMethod();
+            policy.AllowAnyOrigin();
+            // policy.WithOrigins("http://localhost:3000/",
+            //                     "http://localhost:3000");
+        });
+});
+
 var app = builder.Build();
+
+app.UseCors();
 
 if (app.Environment.IsDevelopment())
 {
