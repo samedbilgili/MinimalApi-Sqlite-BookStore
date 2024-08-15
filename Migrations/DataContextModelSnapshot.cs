@@ -17,7 +17,7 @@ namespace MinimalApi.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.7");
 
-            modelBuilder.Entity("minimalapi.Models.Books", b =>
+            modelBuilder.Entity("MinimalApi.Models.Books", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -46,9 +46,6 @@ namespace MinimalApi.Migrations
                     b.Property<string>("Language")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("MyProperty")
-                        .HasColumnType("INTEGER");
 
                     b.Property<int>("PageCount")
                         .HasColumnType("INTEGER");

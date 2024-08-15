@@ -6,9 +6,10 @@ namespace MinimalApi.DataBusiness
     {
         T GetById(int id);
         T GetByTitle(string title);
-        IEnumerable<T> GetAll();
-        bool Add(T product);
-        bool Update(T product);
+        IEnumerable<T> GetAll(HttpContext httpContext);
+        int Add(T product);
+        int Update(T product);
         bool Delete(int id);
+        bool UploadFile(IFormFile image, int bookId);
     }
 }
