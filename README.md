@@ -48,6 +48,7 @@ Examine **/swagger** for details.
 - **POST /books**: Create a new book.
 - **PUT /books/{id}**: Update an existing book.
 - **DELETE /books/{id}**: Delete a book by ID.
+- **POST /bookimage**: Save book cover image a book by ID.
   
 
 ## License
